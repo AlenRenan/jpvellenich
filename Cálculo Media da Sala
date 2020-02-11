@@ -1,0 +1,43 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+int main()
+{
+    //DECLARANDO VARIAVEIS
+    int valor_alunos;
+    int count;
+    char nome [50];
+    float var_1;
+    float var_2;
+    float media;
+    float media_final;
+    float soma;
+
+    //QUANTIDADE DE ALUNOS
+    printf("qual a quantidade de alunos?\n");
+    scanf("%d",&valor_alunos);
+
+    //LOOP PARA RESPOSTA
+    for(int i = 1;i<=valor_alunos;i++){
+        printf("\nqual o seu nome aluno %d\n",i);
+        scanf("%s",&nome);
+        printf("qual a nota 1\n");
+        scanf("%f",&var_1);
+        printf("qual a nota 2\n");
+        scanf("%f",&var_2);
+        media = (var_1+var_2)/2;
+        printf("a media do aluno %d e: %f",i,media);
+        soma =+ media;
+    }
+
+    media_final = soma/valor_alunos;
+    printf("\n a media da sala e: %f",media_final);
+
+    //LOOP EXTRA
+    count = 0;
+    while(count<2){
+        printf("%d",count);
+        count++;
+    }
+
+}
