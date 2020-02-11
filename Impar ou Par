@@ -1,0 +1,21 @@
+# jpvellenich
+
+#include <stdio.h>
+#include <stdlib.h>
+
+int main()
+{
+    int var_1;
+    int conta;
+
+    printf("qual o valor?\n");
+    scanf("%d",&var_1);
+
+    conta = var_1%2;
+
+    if(conta == 0){
+        printf("o numero e par");
+    }else{
+        printf("o numero e impar");
+    }
+}
