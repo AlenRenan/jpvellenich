@@ -1,0 +1,67 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+int main()
+{
+    int var_1;
+    int d1;
+    int d2;
+    int d3;
+    int maior_var;
+    int menor_var;
+
+    printf("Escreva um numero de 3 algarismos:\n");
+    scanf("%d",&var_1);
+    for(int i=0;i<7;i++){
+        d1 = var_1/100;
+        d2 = (var_1/10) - d1*10;
+        d3 = var_1 - d1*100 -d2*10;
+        if(d1>d2&&d1>d3){
+            if(d2>d3){
+                maior_var = d1*100+d2*10+d3;
+            }else if(d3>d2){
+                maior_var = d1*100+d3*10+d2;
+            }
+        }
+        if(d2>d1&&d2>d3){
+            if(d1>d3){
+                maior_var = d2*100+d1*10+d3;
+            }else if(d3>d1){
+                maior_var = d2*100+d3*10+d1;
+            }
+        }
+        if(d3>d2&&d3>d1){
+            if(d1>d2){
+                maior_var = d3*100+d1*10+d2;
+            }else if(d2>d1){
+                maior_var = d3*100+d2*10+d1;
+            }
+        }
+        if(d1<d2&&d1<d3){
+            if(d2<d3){
+                menor_var = d1*100+d2*10+d3;
+            }else if(d3<d2){
+                menor_var = d1*100+d3*10+d2;
+            }
+        }
+        if(d2<d1&&d2<d3){
+            if(d1<d3){
+                menor_var = d2*100+d1*10+d3;
+            }else if(d3<d1){
+                menor_var = d2*100+d3*10+d1;
+            }
+        }
+        if(d3<d1&&d3<d2){
+            if(d1<d2){
+                menor_var = d3*100+d1*10+d2;
+            }else if(d2<d1){
+                menor_var = d3*100+d2*10+d1;
+            }
+        }
+        printf("menor valor: %d\n",menor_var);
+        printf("maior valor: %d\n",maior_var);
+        var_1 = maior_var - menor_var;
+        printf("valor apos conta: %d\n",var_1);
+
+    }
+}
