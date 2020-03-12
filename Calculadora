@@ -1,0 +1,57 @@
+import java.util.Scanner;
+/**
+ * Escreva a descrição da classe Aplication aqui.
+ * 
+ * @author (seu nome) 
+ * @version (número de versão ou data)
+ */
+public class Aplication
+{
+  
+    public static void main(String args[]){
+    
+        Calculadora calc = new Calculadora();
+        Scanner teclado = new Scanner(System.in);
+        
+        double var_1 = 0, var_2 = 0;
+        double result;
+        String op;
+        
+        
+        System.out.println("Digite um valor 1:");
+        var_1 = teclado.nextDouble();
+        System.out.println("Digite um valor 2:");
+        var_2 = teclado.nextDouble();
+        System.out.println("Digite uma operacão:");
+        op = teclado.next();
+        
+        while(! op.equals("-") & ! op.equals("+") & !op.equals("/") & !op.equals("*")){
+            System.out.println("Digite uma operacão:");
+            op = teclado.next();
+        }
+        
+        if(op.equals("+")){
+        //Fazer a soma
+        result = calc.somar(var_1,var_2);
+        System.out.println("A soma é " + result);
+        }else if(op.equals("-")){
+        //Fazer a subtração
+        result = calc.subtrair(var_1,var_2);
+        System.out.println("A subitraçâo é " + result);
+        }else if(op.equals("/")){
+        //Fazer a diisão
+        result = calc.dividir(var_1,var_2);
+        System.out.println("A divisão é " + result);
+        }else if(op.equals("*")){
+        //Fazer a multiplicação
+        result = calc.multiplicar(var_1,var_2);
+        System.out.println("A multiplicação é " + result);
+        }
+       
+        
+        
+        
+        
+    }
+    
+}
